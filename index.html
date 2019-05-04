@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!--
+	Name: Jordan Rader
+	Class: ISAM 4332.01
+	Spring 2019
+	-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ISAM 4332: Assignment 03</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link href="css/image.css" rel="stylesheet" />
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="./css/bootstrap-theme.min.css" />
+
+	<style type="text/css">
+		body {
+			margin-top: 60px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Mortgage Application</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+
+				<form action="Index.html" method="post" enctype="multipart/form-data">
+					<div class="panel panel-primary">
+						<div class="panel-heading"><h1 class="panel-title">Mortgage Application</h1></div>
+                        <div class="panel-body">
+                            <h2 class="h3">Applicant Details</h2>
+                            <!-- Begin form fields for applicant details-->
+                            
+                            <div class="mortgage-form">
+                                <label for="lName">Last Name</label>
+                                <input type="text" class="form-control" id="lName" name="lName" maxlength="128" placeholder="Last Name" />
+                            </div>
+                            <div class="mortgage-form">
+                                <label for="fName">First Name</label>
+                                <input type="text" class="form-control" id="fName" name="fName" maxlength="128" placeholder="First Name" />
+                            </div>
+                            
+                            <div class="mortgage-form">
+                                <label for="DOB">Date of Birth</label>
+                                <input type="text" class="form-control" id="DOB" name="DOB" maxlength="10" placeholder="Date of Birth" />
+                            </div>
+                            
+                            <div class="mortgage-form">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" maxlength="256" placeholder="Email Address" />
+                            </div>
+                            <!-- Phone Number -->
+                            <div class="mortgage-form">
+                                <label for="phoneNum">Phone Number</label>
+                                <input type="tel" class="form-control" id="phoneNum" name="phoneNum" maxlength="32" placeholder="Phone #" />
+                            </div>
+                            
+                            <div class="mortgage-form">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" name="address" maxlength="512" placeholder="Address" />
+                            </div>
+                            <div class="mortgage-form">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" name="city" maxlength="256" placeholder="City" />
+                            </div>
+                            <div class="mortgage-form">
+                                <label for="state">State</label>
+                                <input type="text" class="form-control" id="state" name="state" maxlength="50" placeholder="State" />
+                            </div>
+                            <div class="mortgage-form">
+                                <label for="zip">ZIP Code</label>
+                                <input type="text" class="form-control" id="zip" name="zip" maxlength="10" placeholder="ZIP Code" />
+                            </div>
+                            
+                            <div class="mortgage-form">
+                                <label for="income2018">Gross Income 2018</label>
+                                <input type="number" class="form-control" id="income2018" name="Income2018" min="0" />
+                            </div>
+                            <div class="mortgage-form">
+                                <label for="income2017">Gross Income 2017</label>
+                                <input type="number" class="form-control" id="income2017" name="Income2017" min="0" />
+                            </div>
+                            <div class="mortgage-form">
+                                <label for="income2016">Gross Income 2016</label>
+                                <input type="number" class="form-control" id="income2016" name="Income2016" min="0" />
+                            </div>
+                            
+                            <div class="mortgage-form">
+                                <label> Married?<input type="checkbox" value="true" /></label>
+                            </div>
+                            <div class="mortgage-form">
+                                <label> Veteran?<input type="checkbox" value="true" /></label>
+                            </div>
+                            
+                            <div class="mortgage-form">
+                                <label for="mortAdditionalInfo">Additional Information</label>
+                                <textarea class="form-control" id="additionalInfo" name="additionInfo" maxlength="2000"></textarea>
+                            </div>
+                            <!-- End form fields for applicant details-->
+                            <h2 class="h3">Loan Details</h2>
+                            <!-- Begin form fields for loan details -->
+                            
+                            <div class="mortgage-form">
+                                <label for="mortLoanAmt">Loan Amount</label>
+                                <input type="number" class="form-control" id="mortLoanAmt" name="mortLoanAmt" min="50000" max="1000000" value="100000" />
+                            </div>
+                           
+                            <div class="mortgage-form">
+                                <label for="mortDownPayment">Down Payment</label>
+                                <input type="number" class="form-control" id="mortDownPayment" name="mortDownPayment" min="0" value="150000" />
+                            </div>
+                            
+                            <div class="mortgage-form">
+                                <label for="mortInterestRate">Interest Rate</label>
+                                <input type="number" class="form-control" id="mortInterestRate" name="mortInterestRate" min="2.00" max="15.00" step="0.01" value="4.50" />
+                            </div>
+                            
+                            <div class="mortgage-form">
+                                <label>
+                                    <input type="radio" name="mortLoanDuration" id="mortLoanDuration180" value="180" />
+                                    15 years / 180 months
+                                </label>
+                            </div>
+                            <div class="mortgage-form">
+                                <label>
+                                    <input type="radio" name="mortLoanDuration" id="mortLoanDuration360" value="360" checked />
+                                    30 years / 360 months
+                                </label>
+                            </div>
+                            
+                            <div class="mortgage-form">
+                                <label for="monthlyPayment">Monthly Payment</label>
+                                <input type="number" class="form-control" id="monthlyPayment" name="monthlyPayment" placeholder="0.0" min="0" value="0" readonly />
+                            </div>
+                            <!-- End form fields for loan details -->
+                        </div>
+						<div class="panel-footer text-right">
+							<button id="resetBtn1" type="reset" class="btn btn-default">Reset</button>
+							<button id="calculateBtn" class="btn btn-primary" type="button">Calculate</button>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h1 class="panel-title">Amortization Schedule</h1>
+					</div>
+					<div class="panel-body">
+						<!-- Begin Table for Amortization Schedule -->
+                        <table id="amortizationTbl" class="table table-condensed table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Payment #</th>
+                                    <th>Current Balance</th>
+                                    <th>Payment Total</th>
+                                    <th>Principal</th>
+                                    <th>Interest</th>
+                                    <th>Interest Fees</th>
+                                    <th class="text-center">
+                                        <img src="newbalance.jpg" />
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Payment #</th>
+                                    <th>Current Balance</th>
+                                    <th>Payment Total</th>
+                                    <th>Principal</th>
+                                    <th>Interest</th>
+                                    <th>Interest Fees</th>
+                                    <th class="text-center">
+                                        <img src="newbalance.jpg" />
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+						<!-- End Table for Amortization Schedule -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- jQuery -->
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="./js/bootstrap.min.js"></script>
+	<!-- Samples script -->
+	<script src="./js/calculator.js"></script>
+</body>
+</html>
