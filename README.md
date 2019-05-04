@@ -1,2 +1,3 @@
 # MortGage
-js mortgage app
+javascript and jquery mortgage app
+project uses bootstrap css not shown here
